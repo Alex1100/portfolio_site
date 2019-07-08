@@ -3,16 +3,23 @@ import 'regenerator-runtime/runtime';
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { JobChatbot } from './components/JobChatbot';
+import { SiteMenu } from './components/SiteMenu';
+import { About } from './components/About';
 
 class App extends Component {
   constructor(props) {
     super(props);
   }
 
+  componentDidMount() {
+    document.body.style.backgroundColor = 'rgb(198, 229, 247, 0.5)';
+  }
+
   render() {
     return (
       <Fragment>
-        <h1>Hello Portfolio Site.</h1>
+        <SiteMenu />
+        <About />
         <JobChatbot />
       </Fragment>
     );

@@ -43,11 +43,11 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'font-loader?format[]=truetype&format[]=woff&format[]=embedded-opentype'],
       },
       {
-        test: /\.(jpe?g|png|gif|svg|ai)$/i,
+        test: /\.(jpe?g|gif|svg|ai)$/i,
         loaders: [
           'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
           'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false',
-          'url-loader?limit=8192',
+          'url-loader?limit=10000',
         ],
       },
       {

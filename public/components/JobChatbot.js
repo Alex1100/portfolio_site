@@ -7,10 +7,8 @@ export const JobChatbot = (props) => {
   const [chatbotMode, setChatbotMode] = useState('intro');
   const [resetChatButtonColor, setResetChatButtonColor] = useState(false);
   useEffect(() => {
-    console.log('YOO: ', document.getElementsByClassName('rsc-float-button'));
     document.getElementsByClassName('rsc-float-button')[0].style.backgroundColor = '#25282d';
     setResetChatButtonColor(true);
-
   }, [resetChatButtonColor]);
 
   const jobOptions = [
@@ -24,7 +22,6 @@ export const JobChatbot = (props) => {
   ];
 
   const renderChatbot = () => {
-    console.log('LANDS HERE THOUGH!!!: ', window.speechSynthesis, window.speechSynthesis.getVoices()[1]);
     if (chatbotMode === 'intro') {
       return (
         <Fragment>
